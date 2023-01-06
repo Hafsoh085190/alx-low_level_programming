@@ -133,7 +133,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0')
-		return (NULL)
+		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	if (index >= ht->size)
@@ -152,7 +152,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	shash_node_t *node
+	shash_node_t *node;
 
 	if (ht == NULL)
 		return;
